@@ -1,6 +1,6 @@
 
 // runs the application using imports from lib/!
-const { Square, Circle, Triangle } = require("./lib/shapes.js");
+const { Shape, Square, Circle, Triangle } = require("./lib/shapes.js");
 const fs = require("fs");
 const inquirer = require("inquirer");
 const path = require("path");
@@ -9,8 +9,7 @@ const path = require("path");
 
 
 function whoThatShape() {
-    inquirer
-        .prompt([
+    inquirer.prompt([
             {
                 type: "list",
                 name: "promptShape",
@@ -79,8 +78,8 @@ function whoThatShape() {
         });
 }
 
-whoThatShape();
-
-// Error [ERR_REQUIRE_ESM]: require() of ES Module /Users/jacquelinemartinez/Desktop/Bootcamp-Downloads/challenge-10/node_modules/inquirer/lib/inquirer.js from /Users/jacquelinemartinez/Desktop/Bootcamp-Downloads/challenge-10/index.js not supported.
+// whoThatShape();
 
 // Instead change the require of inquirer.js in /Users/jacquelinemartinez/Desktop/Bootcamp-Downloads/challenge-10/index.js to a dynamic import() which is available in all CommonJS modules.
+
+// Error [ERR_REQUIRE_ESM]: require() of ES Module /Users/jacquelinemartinez/Desktop/Bootcamp-Downloads/challenge-10/node_modules/inquirer/lib/inquirer.js from /Users/jacquelinemartinez/Desktop/Bootcamp-Downloads/challenge-10/index.js not supported.

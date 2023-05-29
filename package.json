@@ -6,6 +6,8 @@
   "directories": {
     "example": "examples",
     "lib": "lib"
+  }, "dependencies": {
+    "inquirer": "^8.2.4"
   },
   "scripts": {
     "test": "jest"
@@ -13,8 +15,7 @@
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "dependencies": {
-    "inquirer": "^9.2.0",
+  "devDependencies": {
     "jest": "^29.5.0",
     "node-fetch": "^2.6.1",
     "require-stack": "^1.0.2"

@@ -41,7 +41,7 @@ function whoThatShape() {
                 choices: ["Magenta", "Pink", "Fuschia", "White"]
             },
         ])
-        .then((responses) => {
+        .then((answers) => {
             let newShape = answers.shape;
             let newColor = answers.color;
             let newText = answers.text;
@@ -50,7 +50,10 @@ function whoThatShape() {
 
             if (newShape == "Circle") {
                 const circle = new Circle(newColor, newText, newTextColor);
-                const output = circle.makeCircle(circle.color, circle.text, circle.textColor);
+                const output = circle.makeCircle(
+                    circle.color,
+                    circle.text,
+                    circle.textColor);
                 console.log(output);
                 fs.writeFile(`./examples/CIR:${newText}.svg`, output, (err) =>
                     err ? console.log(err) : console.log('You did it! GO LOOK AT YOUR CIRCLE!')

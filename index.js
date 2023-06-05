@@ -25,13 +25,7 @@ function whoThatShape() {
             {
                 type: "input",
                 name: "promptText",
-                message: "Okay, and what she got to say?",
-                validate: function (answer) {
-                    if (answer.length < 3) {
-                        return console.log("No more than 3 letters, plz + ty!");
-                    }
-                    return true;
-                }
+                message: "Okay, and what she got to say?"
             },
             {
                 type: "list",
@@ -41,10 +35,11 @@ function whoThatShape() {
             },
         ])
         .then((answers) => {
-            let newShape = answers.shape;
-            let newColor = answers.color;
-            let newText = answers.text;
-            let newTextColor = answers.textColor;
+            // match shapes with shapes
+            let newShape = answers.promptShape;
+            let newColor = answers.promptShapeColor;
+            let newText = answers.promptText;
+            let newTextColor = answers.promptTextColor;
             console.log(newShape, newColor, newText, newTextColor);
 
             if (newShape == "Circle") {
@@ -78,7 +73,7 @@ function whoThatShape() {
         });
 }
 
-// whoThatShape();
+whoThatShape();
 
 // Instead change the require of inquirer.js in /Users/jacquelinemartinez/Desktop/Bootcamp-Downloads/challenge-10/index.js to a dynamic import() which is available in all CommonJS modules.
 
